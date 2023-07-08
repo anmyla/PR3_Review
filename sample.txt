@@ -1,0 +1,11 @@
+In Java, StringReader is a class that extends Reader and is used for reading
+character data from a String. It allows you to treat a String as a
+character stream, making it useful when you need to read characters
+from a String as if reading from a file or other input source.
+
+With StringReader, you can read characters from a String using
+methods such as read(), read(char[]), or read(char[], int, int).
+It provides similar functionality to other Reader classes but operates
+specifically on a String rather than a file or input stream.
+This can be helpful in scenarios where you have character data stored
+in a String and want to process it as a stream of characters.

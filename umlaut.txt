@@ -1,0 +1,7 @@
+Dadurch kann die Anzahl der tatsächlichen Lesevorgänge
+reduziert und die Leistung verbessert werden.
+
+Die Puffergröße ist in der Regel abhängig von der Implementierung,
+beträgt jedoch normalerweise einige Kilobyte. Der BufferedInputStream
+verwaltet automatisch das Auffüllen des Puffers aus dem zugrunde
+liegenden Stream bei Bedarf.

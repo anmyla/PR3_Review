@@ -1,8 +1,8 @@
-package FileClass;
+package a_FileClass;
 
 import java.io.File;
 
-public class FileClass_PropertiesPrintedOnConsole {
+public class FileClass_FilePropertiesPrintedOnConsole {
     public static void main(String[] args) {
         File file = new File("/Users/myla/Documents/Java Projects/PR3");
         printDirectoryContent(file);

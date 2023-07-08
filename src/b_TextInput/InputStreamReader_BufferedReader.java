@@ -1,4 +1,4 @@
-package TextInput;
+package b_TextInput;
 
 import java.io.BufferedReader;
 import java.io.IOException;

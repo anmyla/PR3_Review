@@ -1,4 +1,4 @@
-package TextInput;
+package b_TextInput;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -16,7 +16,7 @@ public class File_FIleReader_BufferedReader {
 
         }
         public static void readAFileGoogleSolution() { //googled method
-            String filePath = "faust.txt"; // file path
+            String filePath = "sample.txt"; // file path
             try (BufferedReader reader = new BufferedReader(new FileReader(filePath))) {
                 String line;
                 while ((line = reader.readLine()) != null) {
@@ -28,7 +28,7 @@ public class File_FIleReader_BufferedReader {
         }
         public static void readAFileMySolution() throws IOException { // own program
             //With Scanner and  "(Paths.get(PATH))", the content will be read called and read
-            Scanner someText = new Scanner(Paths.get("test.txt"));
+            Scanner someText = new Scanner(Paths.get("sample.txt"));
             String nextLine = someText.nextLine();
             do {
                 System.out.println(nextLine);
@@ -39,7 +39,7 @@ public class File_FIleReader_BufferedReader {
 
         public static void readAFileClassroomSolution() throws IOException {
 //        classroom method
-            File file = new File("faust.txt");
+            File file = new File("sample.txt");
             FileReader fileReader = new FileReader(file);
             BufferedReader reader = new BufferedReader(fileReader);
 

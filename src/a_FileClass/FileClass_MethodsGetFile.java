@@ -1,4 +1,4 @@
-package FileClass;
+package a_FileClass;
 
 import java.io.File;
 import java.io.IOException;
@@ -9,11 +9,11 @@ public class FileClass_MethodsGetFile {
         // File file = new File("C:\\Users\\s53026\\IdeaProjects\\PR3\\test.txt");
 
         //Example using a file with relative path
-        File file = new File("test.txt"); //file in the same Java Project FOlder
+        File file = new File("sample.txt"); //file in the same Java Project FOlder
         printFileInfo(file);
 
         //Create a new File
-        createNewFile("k.txt");
+        createNewFile("createFile.txt");
 
         //List all directories
         String directoryPath = "/Users/myla/Documents/Java Projects"; //mac uses slash instead of backslash

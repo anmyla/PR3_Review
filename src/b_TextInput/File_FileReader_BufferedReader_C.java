@@ -1,4 +1,4 @@
-package TextInput;
+package b_TextInput;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -7,8 +7,8 @@ import java.io.IOException;
 
 public class File_FileReader_BufferedReader_C {
     public static void main(String[] args) throws IOException {
-        // öffnet die Datei test.txt
-        File file = new File("k.txt");
+        // öffnet die Datei sample.txt
+        File file = new File("sample.txt");
         // liefert einen textorientierten Stream der Datei zurück
         FileReader fileReader = new FileReader(file);
         // legt einen BufferedReader über den FileReader.
@@ -16,8 +16,8 @@ public class File_FileReader_BufferedReader_C {
         BufferedReader bufferedReader1 = new BufferedReader(fileReader);
 
         // ODER
-        BufferedReader br2 = new BufferedReader(new FileReader(new File("k.txt")));
-        BufferedReader br3 = new BufferedReader(new FileReader("k.txt"));
+        BufferedReader br2 = new BufferedReader(new FileReader(new File("sample.txt")));
+        BufferedReader br3 = new BufferedReader(new FileReader("sample.txt"));
         // Zeile für Zeile wird eingelesen. Ist das Dateiende erreicht, so wird null zurückgeliefert.
         String line;
         while ((line = bufferedReader1.readLine()) != null) {
