@@ -1,4 +1,4 @@
-package z_Exercises.Exercise1_WriteToFile_ReadAndOutputToConsole;
+package z_Exercises.Ex1_WriteToFile_ReadAndOutputToConsole;
 
 public class Main2 {
     public static void main(String[] args) {
