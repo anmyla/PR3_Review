@@ -2,10 +2,9 @@ package b_TextInput;
 
 import java.io.FileInputStream;
 import java.io.InputStream;
-import java.io.InputStreamReader;
 import java.io.Reader;
 
-public class InputStreamReader_Example {
+public class InputStreamReader {
     /*
     An InputStreamReader is a bridge from byte streams to character streams:
     It reads bytes and decodes them into characters using a specified
@@ -16,7 +15,7 @@ public class InputStreamReader_Example {
     public static void main(String[] args) {
         try  {
             InputStream stream = new FileInputStream("sample.txt");
-            Reader reader = new InputStreamReader(stream);
+            Reader reader = new java.io.InputStreamReader(stream);
             int data = reader.read();
             while (data != -1) {
                 System.out.print((char) data); //int data will be casted to char

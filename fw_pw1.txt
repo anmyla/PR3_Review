@@ -1,0 +1,8 @@
+I am writing on a text file
+Using Java :) :) :)
+with the Classes: FileWriter and PrintWriter.
+It's pretty cool! :))))
+I am writing on a text file
+Using Java :) :) :)
+with the Classes: FileWriter and PrintWriter.
+It's pretty cool! :))))

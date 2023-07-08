@@ -12,12 +12,12 @@ public class StringWriter {
      */
 
     public static void main(String[] args) {
-        String data = "This is the text in the string.";
+        String data = "This is the text in the string";
 
         try {
             java.io.StringWriter stringWriter = new java.io.StringWriter();
             stringWriter.write(data);
-            stringWriter.append("append");
+            stringWriter.append(": append");
             stringWriter.flush();
             stringWriter.close();
             System.out.println("Data of StringWriter: "+ stringWriter);

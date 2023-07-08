@@ -11,9 +11,9 @@ public class PrintWriter_2 {
          */
     public static void main(String[] args) {
         try {
-            PrintWriter printWriter = new PrintWriter(new FileWriter("output.txt"));
+            PrintWriter printWriter = new PrintWriter(new FileWriter("printWriter2.txt"));
 
-            int age = 25;
+            int age = 26;
 
             printWriter.printf("I am %d years old.", age);
             printWriter.println("I am " + age + " years old.");

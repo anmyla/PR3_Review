@@ -17,7 +17,7 @@ public class OutputStreamWriter_1 {
 
         String data = "example";
 
-        FileOutputStream file = new FileOutputStream("output.txt");
+        FileOutputStream file = new FileOutputStream("outputStream.txt");
         java.io.OutputStreamWriter outputStreamWriter = new java.io.OutputStreamWriter(file);
 
         outputStreamWriter.write(data);

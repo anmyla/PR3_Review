@@ -9,7 +9,7 @@ public class OutputStreamWriter_2 {
 
         try {
             // Creates an output stream
-            FileOutputStream file = new FileOutputStream("output.txt");
+            FileOutputStream file = new FileOutputStream("outputStream2.txt");
 
             // Creates an output stream reader with default encoding
             OutputStreamWriter output1 = new OutputStreamWriter(file);

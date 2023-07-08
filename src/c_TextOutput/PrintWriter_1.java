@@ -21,7 +21,7 @@ PrintWriter just exposes the print methods on any Writer in character mode.
      */
 
     public static void main(String[] args) throws IOException {
-        FileWriter fileWriter = new FileWriter("neue_datei_18mai.txt");
+        FileWriter fileWriter = new FileWriter("printWriter");
         PrintWriter printWriter = new PrintWriter(fileWriter);
 
         // Mittels println(...) werden Zwei Zeilen geschrieben. Jede Zeile wird richtig abgeschlosen.
@@ -30,7 +30,7 @@ PrintWriter just exposes the print methods on any Writer in character mode.
         printWriter.print(1);
         printWriter.print(2);
         printWriter.println();
-        printWriter.format("This is a %s program with %d", "Hello World", 100);
+        printWriter.format("This is a %s program with %d", "Hello World", 100); //this is with format specifiers
         // printWriter.printf()
 
         // flush() löst das Schreiben aus
