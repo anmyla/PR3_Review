@@ -1,0 +1,298 @@
+File Input Output - Overview/File Classes
+
+1. what can be the sources of files everywhere?
+ - Hard disk
+ - web
+ - RAM
+ - external storage media
+
+2. why do you need the input stream reader?
+
+3. what is the difference between file, console and socket?
+
+4. what is the name of the console file?
+- System.in
+- System.out
+
+5. what happens when you write something to socket? Who gets it?
+ - server
+6. what is binary data? What is a text-file?
+ -
+7. what is doc-file?
+ - binary-file or richtext-file; you can recognize it when you open doc in wordpad
+8. what is a hex-editor?
+ - .hex stands for hexadecimal (there are 'hexadecimal area' and 'character area')
+9. is it a binary file or a txt file (possible indication: figure vlg. ppt S12)
+ - because you can't (really) read 'character area' on the right - binary
+10. how do I write to the console?
+ -System.out (is console output)
+11. what does 'platform-independent' mean?
+ - OS doesn't matter
+ - when accessing files use the class 'file
+ - independent input of the path idF C:\\... is NOT platform independent but Windows specific
+12. what does a file class do? What are the advantages?
+ - cf. ppt. S 21
+---------------------------------------------------------------
+
+File Input Output - Part A: Text
+
+13. what does 'io' stand for?
+ -input-output
+14. what are the two ways to access files?
+
+15. can you read a text file byte-oriented?
+ - yes
+16. is it possible to read a binary file in a character-oriented way?
+ - yes, but the characters do not make sense for us
+17. what is a byte? How big?
+ -8 bit (smallest unit)
+18. how would you comment the advantage of 'effective access' in zshg with java.io.Reader?
+ - file-class, steam-reader and then buffer
+18. what does BufferedReader suggest?
+ - Buffer, block handling; you take a 'bump' of data right away
+19. how to write a new line?
+ -br.newLine()
+20. fig...? Cf. ppt S8, what is this?
+ -class diagram
+21.Explain the structure of a class diagram? What is superclass, what is subclass...?
+ -...
+22.'Reader' is an abstract class? What does 'abstract' mean?
+ - Class that cannot be instantiated; to create an instance you have to derive it.
+23. cf. ppt p 18 specification: write a program that writes keyboard input line by line to the console...
+
+24. what are the possibilities to read files?
+ -(file -> new fileReader -> bufferedReader all around)
+25. what is difference between print and println
+ -ln stands for new line
+26. what does 'flush' stand for?
+ - triggers the write, everything that is not yet written out of buffer.
+27. what is the disadvantage of the buffer?
+ - something can remain in the buffer
+28. what does 'close' stand for?
+29. code-example idF: String line; -> explain what happens in this line?
+    while (!(line = bufferedReader.readLine()).equals("STOP")) {...
+30. what would happen if I call 'write' again after 'close'?
+ - it will not be written anymore
+31. how to check if user types 'stop'?
+ - if (line.equals("STOP")) {break;} if (line == NULL) {break;}
+-----------------------------------------------------------------
+
+File Input Output - Part B: Binary
+
+32. can you derive an 'interface' directly?
+ - must be implemented
+33. what kind of loops do you know?
+ -do-while
+ -while
+ -for
+34. for binary-input a txt-file is used? How does this make sense?
+ -each byte is read separately and is written to the console.
+35. what does 'binary output stream' mean?
+36. is it possible to write a txt-file that contains only binary characters?
+ -with binary-writer, binary output
+37. code-example idF: char c = (char) System.in.read();
+                  if (c == 'x') {System.out.println ("There came an X")}
+38. how many possibilities do you have with a byte?
+ -255
+39. ASCI code e.g. what code has e.g. 'x'?
+40. what does buffered inputStream do?
+41. ue16 ppt. S23; write object - read object?
+42. why would you want to store an object (class)?
+ - to read/load it again later
+43.Code line ex: what kind of file is this? (binary, txt)
+44.write what you know about character encoding?
+ -UTF-8 to ANSI uU (umlauts..)
+45. which encoding do we use mainly?
+ -UTF-8
+46. problems with I/O. Give an example of what can go wrong with input?
+ -file does not exist
+ -drive letter can be lost
+ -user exits 'input prompt'.
+ -server or source disconnected
+47. what to do with these dangers/problems?
+ -throw exception
+48. what happens if exception is not caught?
+ -Program may crash
+--------------------------------------------------------------------------
+Miscellaneous Exercises:
+UE-8: Write a program that writes line-by-line keyboard input to console....with exception.
+ -main; inputstreamreader, bufferedreader
+ -try catch block
+
+UE-11: Write a class Product for Abb of products...with exception (without throws, but we catch)
+
+49: Why did main need a throws IO exception in the example?
+What exception can fileReader throw?
+ -fileNotFound
+51. do we use exceptions in ex. 11?
+-yes in any case
+-try-catch handles exceptions explicitly
+-throws makes program crash
+
+File IO completion example:
+Write a program to manage addresses....
+
+52. what should the function ExportToCSV do? (CSV = Comma Separated Values)
+---------------------------------------------------------------------------
+
+Exceptions:
+
+53 What are exceptions for? What are exceptions?
+ - gives information about WHAT, WHY and WHERE error happened
+54. what information do you get from exception. (in the console)
+55. what do the keywords 'try', 'finally', 'throw' and 'throws' stand for?
+56. advantages of the exception mechanism?
+ -it is functional code (in try)
+ -separated from error code (in catch)
+57. how do you define your own exception?
+ -by deriving it from the exception class (extends)
+58. what is the difference between checked and unchecked exception? What does each mean?
+ -with checked you are forced to 'catch' or 'specify
+ -unchecked does not need to be handled
+59. can something go wrong with a division? And do you have to put a division in a try-catch block?
+60. what is a stack? What is the order of accessing and saving
+61. must you use the keyword 'finally
+62. explain the elements of a StackTrace?
+63. exception hierarchies. Can you catch exception e?
+ - can, but should not - always check on smallest possible ~level~.
+64. code example: which catch block is executed first?
+65. what are 'errors' in contrast to 'exceptions'?
+What does 'wrapping' or 'chaining' mean?
+-one exception is caught and another is thrown (old exception is repackaged)
+-if ~wrapped~ more often it is fixed a chain
+67) Why is 'silent catch' to be avoided?
+68.Give an overview of the DOs & DONTs related to exceptions.
+
+------------------------------------------------------------------------------
+.....26.06.2023
+Threads
+
+69. why threads?
+70.How do (multiple) threads increase performance?
+ (-woodchipper ex.)
+71. what is a 'critical section'?
+72. what keyword do you use against 'critical section' for lock?
+ - synchronized
+73) What does static mean for lock?
+74) What if everyone has their own lock?
+75. how can there be problems with two/more threads running in parallel? How do you counteract this problem?
+ - cf. account ex.
+ - with 'synchronized(Lock){ critical stuff in here }
+76. what happens when using 'synchronized'?
+77. explain the problem in the case of the account example? Why do the correct amounts not (always) result?
+ - 1. read
+ - 2. calculate
+ - 3. write new amount
+ (we have no influence on the order)
+78. is it possible to run more than one thread on a single CPU?
+ - yes
+79. is there a speed advantage if multiple threads run on single CPU?
+ - no
+ - Cf. project manager is someone who thinks 9 women can deliver a baby in 1 month.
+80. who decides how the workload is distributed with 2 CPU?
+ - Operating system (for whole programs)
+ - JVM (with threads)
+
+What does the 'scheduler' do?
+ - tells when which thread/program has to be done. (in case of threads this is done by JVM)
+(((. How is it with mobiles, can CPUs be different sizes?
+ - yes, in desktopPC/laptop it is not yet so )))) we don't have to notice. just fyi
+82. what is a process, what is a thread? (outline in writing)
+83.What do threads share within a process?
+ - memory
+ - processing power
+ - thread is trapped in the process
+84. what does 'thread change is unpredictable' mean?
+ - cf. account example
+85. what are the uses of threads?
+ -background processes
+What is the 'thread life cycle'? How does it start?
+ -new (thread is created)
+ -.start : here run method is executed
+ -waiting: here thread waits. when it starts working again, you come back to running
+ -dead: when thread is done
+87. how are threads 'woken up'?
+ - keyword: notify
+88. what are the advantages of a single thread?
+ - you don't have to switch (which saves time; compare one 40h job is more exhausting than 2 20h jobs)
+ - maintenance costs of the applications are reduced
+89. how do you go about 'luring' resources?
+ - cf. printer/server..
+ - always in the same order
+90. what is a 'dead lock'? What are the requirements for a dead lock to occur? How to avoid a dead lock?
+ - when two threads are waiting for resources that another thread has already locked.
+ - cf. knife/fork example.
+ Preconditions:
+  -more than one lock object
+ -not the same order
+ -several threads
+ avoid by:
+ - by always 'locking' resources in the same order.
+91) How to create threads? Which option is preferable?
+ - extends
+ - implements !
+92. give (2) advantages of multi-threads?
+ - Processor resources are used optimally
+ - usability (e.g. client wants to display while he/she waits, is displayed in own thread)
+93. give important methods related to threads and describe them....
+ - .wait()
+ - .yield() - I have nothing to do right now, you go ahead...; ex. boxes (give up voluntarily)
+ - .notify() -
+ - ppt. S33 or S34
+95. who/what enforces priorities?
+ - sceduler
+96. what is the difference between polite and forced stopping?
+ - polite: requestShutDown(); check for boolean (isRunning) if thread is still running/while loop... i.e.: gives instruction 'from outside'
+ - forced: within while loop thread stops somewhere...
+ - combined: first polite then forced
+97. if you don't give a time in the 'join', how long does thread wait?
+ - until the other one is done
+98. what does the 'sceduler' do when .stop() is called?
+ - ...
+99. ~~In the case of two accounts, which lock object is used?
+ -synchronized
+
+-------------------------------------------------------------------
+Network
+
+100. give three examples of networks and at least one serverbsp. and one clientbsp?
+ -chatserver
+ -bsp. socket (to connect somewhere else, client); serverSocket (to accept other connections [v. client]; in this case I am the server)
+ -bsp. ListenToSingleClient ... "time", "port"
+ -mailclient
+ -facebook-messenger (client); server is at facebook
+ -cellphone always client
+ -database-server/ -client(a small one) - SQLite with server
+101. what is the URL class used for?
+ - to read the contents of a page
+102. what does the following URL tell you: https://google.com/cookie.txt? How do you read a/this URL?
+ -which server
+ -company link
+ -the file itself
+103. ex. ftp://user1:pwd33@ftp.bernhardruchs.at/data/cookie.txt. Explain the
+ -file
+ -path (data = root)
+ -which server
+104. which different protocols do you know? (Probably no more than 3 will be asked)
+ -http
+ -https
+ -ftp - file transfer protocol
+ -ssh
+ -smtp - secure mail transfere protocol (see imap and pop)
+105. what is a 'port'?
+ -there are about 65000 ports/per computer
+ -where within a server one connects/docking point....
+ -must be open; as soon as server opens a port, you can connect to it
+ -~~ most ports are opened on request (when program is opened) ~~~
+106. what is a protocol?
+107. what if a program has already opened a port and you want to access the same port with another program?
+ -error message: port already open
+108. why to use bufferedReader when reading URL?
+ -advantage corresponds to disadvantage: that it is buffered
+109. what is flush?
+ -to clear the buffer
+
+
+various exercises:
+Sockets UE3: What happens here? - we access time
+Threads completion example

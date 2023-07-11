@@ -25,16 +25,16 @@ public class FileReadWorker extends Worker implements Runnable {
             BufferedReader br = new BufferedReader(fr);
             while ((one_line = br.readLine()) != null) {
                 if (shouldRun == false) {
-                    break;
+                    break; // Exit the loop if shouldRun is false
                 }
                 // Simulating delay
-                System.out.println(one_line);
-                Thread.sleep(3000);
-                lines.add("Example line 1");
+                System.out.println(one_line); // Print each line of the file
+                Thread.sleep(3000); // Wait for 3 seconds
+                lines.add("Example line 1");// Add example lines to the ArrayList
                 lines.add("Example line 2");
                 lines.add("Example line 3");
             }
-            br.close();
+            br.close(); //close the file so that it can be used by others(programs or functions)
         }
         catch (InterruptedException e) {
             e.printStackTrace();
@@ -49,6 +49,6 @@ public class FileReadWorker extends Worker implements Runnable {
 
     @Override
     public void run() {
-        work();
+        work(); // Call the work method when the thread starts
     }
 }

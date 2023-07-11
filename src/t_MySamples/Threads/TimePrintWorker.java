@@ -11,23 +11,24 @@ public class TimePrintWorker extends Worker implements Runnable {
 
     @Override
     public void run() {
-        work();
+        work(); // Call the abstract method defined in the superclass
     }
 
     @Override
         protected void work() {
-            printStarted();
-            while (shouldRun) {
-                Date currentTime = new Date();
-                System.out.println(currentTime);
+            printStarted(); // Print a message when the worker starts
+            while (shouldRun) { // Keep running as long as shouldRun is true
+                Date currentTime = new Date(); //New Date object
+                System.out.println(currentTime); // Print the current time
+
 
                 try {
                     Thread.sleep(1000); // Wait for 1 second
-                    stopWorker();
+                    stopWorker(); //Stop the worker after waiting
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
             }
-            printStopped();
+            printStopped(); // Print a message when the worker stops
         }
 }
