@@ -1,4 +1,4 @@
-package t_MySamples.Threads;
+package t_MySamples.Threads.Worker;
 
 import java.util.Date;
 
@@ -23,9 +23,11 @@ public class TimePrintWorker extends Worker implements Runnable {
 
 
                 try {
-                    Thread.sleep(1000); // Wait for 1 second
+                    Thread.sleep(1000); // pauses the execution of the thread for 1 sec
                     stopWorker(); //Stop the worker after waiting
                 } catch (InterruptedException e) {
+                    //in case of InterruptedException, the exception will
+                    // be caught by the catch block, and the corresponding stack trace will be printed.
                     e.printStackTrace();
                 }
             }

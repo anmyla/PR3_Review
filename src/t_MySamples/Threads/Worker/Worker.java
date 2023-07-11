@@ -1,4 +1,4 @@
-package t_MySamples.Threads;
+package t_MySamples.Threads.Worker;
 
 public abstract class Worker {
     protected String name;

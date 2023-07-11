@@ -1,4 +1,4 @@
-package t_MySamples.Threads;
+package t_MySamples.Threads.Worker;
 
 import s_Exercises.Ex3_ClosingExercise.Worker;
 import java.io.*;
@@ -36,14 +36,24 @@ public class FileReadWorker extends Worker implements Runnable {
             }
             br.close(); //close the file so that it can be used by others(programs or functions)
         }
+
+        //this is where and how we handle exceptions
         catch (InterruptedException e) {
+            //in case of InterruptedException, the exception will
+            // be caught by the catch block, and the corresponding stack trace will be printed.
             e.printStackTrace();
+
+            //If FileNotFoundException occurs during the process, the exception will
+            // be caught by the catch block, and then a RuntimeException will be thrown
         } catch (FileNotFoundException e) {
             throw new RuntimeException(e);
+
+            //If IOException occurs during the process, it will be caught and then a RuntimeException will be thrown
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
 
+        // Print a message when the worker stops
         printStopped();
     }
 

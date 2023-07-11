@@ -6,27 +6,28 @@ import java.io.FileReader;
 import java.io.IOException;
 
 public class BufferedReader_CharByChar {
-public static void main(String[] args) throws IOException {
-        // öffnet die Datei test.txt
+    public static void main(String[] args) throws IOException {
+        // opens the file test.txt
         File file = new File("sample.txt");
-        // liefert einen textorientierten Stream der Datei zurück
+        // returns a text-oriented stream of the file
         FileReader fileReader = new FileReader(file);
-        // legt einen BufferedReader über den FileReader. Somit kann komfortabler auf die Datei zugegriffen werden.
+        // creates a BufferedReader over the FileReader
+        // This allows for more convenient access to the file.
         BufferedReader bufferedReader = new BufferedReader(fileReader);
 
-        // Zeichen für Zeichen wird eingelesen.
-        // Ist das Dateiende erreicht, so wird -1 zurückgeliefert.
+        // Each character is read one by one.
+        // When the end of the file is reached, -1 is returned.
+
         int c;
         while ((c = bufferedReader.read()) != -1) {
-        // int muss auf char gecastet werden, um somit Buchstaben zu erhalten. (Sonst nur Zahlen)
-        char character = (char) c;
-        System.out.println("int: " + c + " -> char: " + character);
+            // The int value needs to be casted to char in order to obtain characters. (Otherwise, only numbers)
+            char character = (char) c;
+            System.out.println("int: " + c + " -> char: " + character);
         }
-        // bufferedReader wird geschlossen
+        // closes the bufferedReader
         bufferedReader.close();
-        }
-
-        }
+    }
+}
 
 
 

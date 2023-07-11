@@ -8,8 +8,11 @@ public class InputStreamReader_FileWriter_PrintWriter {
     }
 
     public static void inputSaveToFile() throws IOException {
-        InputStreamReader fileReader = new java.io.InputStreamReader(System.in);
+        //Creating an instance of InputStreamReader to convert the bytes into characters
+        InputStreamReader fileReader = new java.io.InputStreamReader(System.in); // the source of the data to be read is System.in(console)
+        // Creates a BufferedReader over the InputStreamReader.
         BufferedReader reader = new BufferedReader(fileReader);
+
         java.io.FileWriter fileWriter = new FileWriter("isr_fw_pw.txt");
         PrintWriter printWriter = new PrintWriter(fileWriter);
 
