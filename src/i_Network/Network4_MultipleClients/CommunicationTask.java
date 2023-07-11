@@ -93,5 +93,3 @@ public class CommunicationTask implements Runnable {
         }
     }
 }
-
-}
