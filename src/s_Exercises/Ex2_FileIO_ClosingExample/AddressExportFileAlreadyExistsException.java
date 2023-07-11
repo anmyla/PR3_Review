@@ -1,4 +1,4 @@
-package z_Exercises.Ex2_FileIO_ClosingExample;
+package s_Exercises.Ex2_FileIO_ClosingExample;
 
 public class AddressExportFileAlreadyExistsException extends Exception {
     public AddressExportFileAlreadyExistsException(String message) {

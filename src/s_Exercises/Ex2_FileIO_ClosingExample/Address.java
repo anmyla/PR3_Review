@@ -1,4 +1,4 @@
-package z_Exercises.Ex2_FileIO_ClosingExample;
+package s_Exercises.Ex2_FileIO_ClosingExample;
 
 public class Address {
     private String firstname;

@@ -1,7 +1,9 @@
-package z_Exercises.Ex1_WriteToFile_ReadAndOutputToConsole;
+package s_Exercises.Ex1_WriteToFile_ReadAndOutputToConsole;
 
-public class Main2 {
-    public static void main(String[] args) {
+import java.io.IOException;
+
+public class Main {
+    public static void main(String[] args) throws IOException {
 
         System.out.println("Program starting up...");
         Product product1 = new Product("mascara1", 56.52,"Cosmetics");
@@ -11,7 +13,7 @@ public class Main2 {
         Product product5 = new Product("iphone 14 pro max", 2300,"Electronics");
         Product product6 = new Product("the legend of zelda TOTK", 60,"Games");
 
-        ProductManagerTryCatch productManager = new ProductManagerTryCatch();
+        ProductManagerThrows productManager = new ProductManagerThrows();
 
         productManager.add(product1);
         productManager.add(product2);
@@ -26,5 +28,6 @@ public class Main2 {
 
 
     }
+
 
 }

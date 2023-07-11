@@ -1,4 +1,4 @@
-package z_Exercises.Ex1_WriteToFile_ReadAndOutputToConsole;
+package s_Exercises.Ex1_WriteToFile_ReadAndOutputToConsole;
 
 import java.io.*;
 import java.util.ArrayList;

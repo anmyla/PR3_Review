@@ -1,9 +1,10 @@
-package z_Exercises.Ex3_ClosingExercise;
+package t_MySamples.Threads;
 
+import s_Exercises.Ex3_ClosingExercise.Worker;
 import java.io.*;
 import java.util.ArrayList;
 
-class FileReadWorker extends Worker implements Runnable {
+public class FileReadWorker extends Worker implements Runnable {
     private String path;
     public ArrayList<String> lines;
 
@@ -15,7 +16,7 @@ class FileReadWorker extends Worker implements Runnable {
 
     @Override
     protected void work() {
-        File f = new File("test.txt");
+        File f = new File("fw_pw1.txt");
         printStarted();
         // Code to read file and populate the 'lines' ArrayList
         try {

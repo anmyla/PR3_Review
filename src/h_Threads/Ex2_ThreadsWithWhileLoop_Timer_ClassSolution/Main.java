@@ -1,5 +1,6 @@
-package h_Threads.Ex2_ThreadsWithWhileLoop_Timer_ClassSolution;/*package Day6.Exercise1ClassSolution;
-import Day6.Class2.ConsoleHelper;
+package h_Threads.Ex2_ThreadsWithWhileLoop_Timer_ClassSolution;
+
+
 
 public class Main {
     private static volatile boolean running = true;
@@ -49,4 +50,4 @@ public class Main {
 
         System.out.println("\nAll processes are now terminated.");
     }
-} */
+}

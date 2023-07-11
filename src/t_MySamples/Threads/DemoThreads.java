@@ -1,9 +1,9 @@
-package z_Exercises.Ex3_ClosingExercise;
+package t_MySamples.Threads;
 
-public class DemoApplication {
+public class DemoThreads {
     public static void main(String[] args) {
         Thread timePrintThread = new Thread(new TimePrintWorker("TimePrintWorker"));
-        Thread fileReadThread = new Thread(new FileReadWorker("FileReadWorker", "test.txt"));
+        Thread fileReadThread = new Thread(new FileReadWorker("FileReadWorker", "fw_pw1.txt"));
 
         fileReadThread.start();
         timePrintThread.start();

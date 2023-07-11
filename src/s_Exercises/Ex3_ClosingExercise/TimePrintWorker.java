@@ -1,4 +1,4 @@
-package z_Exercises.Ex3_ClosingExercise;
+package s_Exercises.Ex3_ClosingExercise;
 
 import java.util.Date;
 

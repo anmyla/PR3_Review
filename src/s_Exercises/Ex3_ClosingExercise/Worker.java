@@ -1,4 +1,4 @@
-package z_Exercises.Ex3_ClosingExercise;
+package s_Exercises.Ex3_ClosingExercise;
 
 public abstract class Worker {
 protected String name;

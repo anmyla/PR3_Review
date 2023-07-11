@@ -1,4 +1,4 @@
-package z_Exercises.MySolution_FileIO_ClosingExample;
+package s_Exercises.MySolution_FileIO_ClosingExample;
 
 import java.io.*;
 import java.util.ArrayList;
